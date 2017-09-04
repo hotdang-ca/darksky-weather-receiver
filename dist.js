@@ -31,9 +31,9 @@ channel.bind(process.env.PUSHER_EVENT, function (data) {
       oledExp.clear();
       oledExp.setTextColumns();
       oledExp.setCursor(0, 0);
-      oledExp.write(output);
+      oledExp.write(pusherData);
     } catch (e) {
-      console.log('Error with oled');
+      console.log('Error with oled', e);
     }
   }
 });
